@@ -18,6 +18,10 @@ function listAllPostsByForumId(req, res) {
       // respond to user with 200 (success) and json encode the users
       res.status(200).json(posts);
     })
+    .then(posts => { // if forums
+      // respond to user with 200 (success) and json encode the users
+      res.status(200).json(posts);
+    })
     .catch(handleError(res)); // catch any errors and send them to the custom error handler function
 }
 
